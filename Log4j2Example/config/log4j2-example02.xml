@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://logging.apache.org/log4j/2.0/config log4j-config.xsd">
+  <Appenders>
+    <Console name="Console" target="">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - Example02 - %msg%n" />
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.wadhams.log4j.app" level="INFO" additivity="false">
+      <AppenderRef ref="Console" />
+    </Logger>
+    <Logger name="com.wadhams" level="WARN" additivity="false">
+      <AppenderRef ref="Console" />
+    </Logger>
+    <Root level="ERROR">
+      <AppenderRef ref="Console" />
+    </Root>
+  </Loggers>
+</Configuration>
